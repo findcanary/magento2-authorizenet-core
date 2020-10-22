@@ -2,13 +2,13 @@
     "name": "authorizenet/magento-module-core",
     "description": "Authorize.Net payment Core module for Magento",
     "require": {
-        "php": "7.0.2|7.0.4|~7.0.6|~7.1.0|~7.2.0|~7.3.0",
+        "php": "7.0.2|7.0.4|~7.0.6|~7.1.0|~7.2.0|~7.3.0|~7.4.0",
         "authorizenet/authorizenet": "~2.0.0",
-        "magento/module-payment": "100.2.*|100.3.*",
+        "magento/module-payment": "100.2.*|100.3.*|100.4.*",
         "ext-json": "*"
     },
     "type": "magento2-module",
-    "version": "1.0.1",
+    "version": "1.0.1.1",
     "license": [
         "proprietary"
     ],
