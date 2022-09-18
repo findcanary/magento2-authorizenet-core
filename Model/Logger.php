@@ -16,7 +16,7 @@ class Logger implements LoggerInterface
      * @var Config
      */
     protected $config;
-    
+
     /**
      * @var \Magento\Framework\Logger\Monolog
      */
@@ -30,18 +30,20 @@ class Logger implements LoggerInterface
     /**
      * Logger Constructor
      *
+     * @param \Magento\Framework\Logger\MonologFactory $loggerFactory
      * @param string $name
      * @param Config $config
+     * @param Logger\Censor $censor
      * @param array $handlers
      * @param array $processors
      */
     public function __construct(
         \Magento\Framework\Logger\MonologFactory $loggerFactory,
-        $name,
+        string $name,
         Config $config,
         Logger\Censor $censor,
-        $handlers = [],
-        $processors = []
+        array $handlers = [],
+        array $processors = []
     ) {
 
         $this->logger = $loggerFactory->create([
@@ -132,7 +134,7 @@ class Logger implements LoggerInterface
      */
     public function log($level, $message, array $context = [])
     {
-        
+
         if ($level == \Psr\Log\LogLevel::DEBUG) {
             $this->debug($message, $context);
             return;

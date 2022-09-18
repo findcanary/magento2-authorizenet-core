@@ -16,12 +16,12 @@ use net\authorize\util\HttpClient;
 
 class AnetRequestProxy implements IApiOperation
 {
-    const TYPE_CREATE_TRANSACTION = 'net\authorize\api\contract\v1\CreateTransactionResponse';
-    const TYPE_DECRYPT_PAYMENT_DATA = 'net\authorize\api\contract\v1\DecryptPaymentDataResponse';
-    const TYPE_CREATE_CUSTOMER_PROFILE = 'net\authorize\api\contract\v1\CreateCustomerProfileResponse';
-    const TYPE_GET_TRANSACTION_DETAILS = 'net\authorize\api\contract\v1\GetTransactionDetailsResponse';
-    const TYPE_UPDATE_HELD_TRANSACTION = 'net\authorize\api\contract\v1\UpdateHeldTransactionResponse';
-    const TYPE_GET_MERCHANT_DETAILS = 'net\authorize\api\contract\v1\GetMerchantDetailsResponse';
+    public const TYPE_CREATE_TRANSACTION = 'net\authorize\api\contract\v1\CreateTransactionResponse';
+    public const TYPE_DECRYPT_PAYMENT_DATA = 'net\authorize\api\contract\v1\DecryptPaymentDataResponse';
+    public const TYPE_CREATE_CUSTOMER_PROFILE = 'net\authorize\api\contract\v1\CreateCustomerProfileResponse';
+    public const TYPE_GET_TRANSACTION_DETAILS = 'net\authorize\api\contract\v1\GetTransactionDetailsResponse';
+    public const TYPE_UPDATE_HELD_TRANSACTION = 'net\authorize\api\contract\v1\UpdateHeldTransactionResponse';
+    public const TYPE_GET_MERCHANT_DETAILS = 'net\authorize\api\contract\v1\GetMerchantDetailsResponse';
 
     /**
      * @var AnetApiRequestType

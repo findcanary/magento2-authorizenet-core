@@ -11,8 +11,8 @@ use Magento\Framework\View\Element\Template;
 
 class AcceptJs extends Template
 {
-    const ACCEPT_JS_PROD_URL = 'https://js.authorize.net/v1/Accept.js';
-    const ACCEPT_JS_TEST_URL = 'https://jstest.authorize.net/v1/Accept.js';
+    public const ACCEPT_JS_PROD_URL = 'https://js.authorize.net/v1/Accept.js';
+    public const ACCEPT_JS_TEST_URL = 'https://jstest.authorize.net/v1/Accept.js';
 
     /**
      * @var \AuthorizeNet\Core\Gateway\Config\Config

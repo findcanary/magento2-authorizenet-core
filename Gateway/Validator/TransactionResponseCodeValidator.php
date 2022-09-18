@@ -16,11 +16,11 @@ use net\authorize\api\contract\v1 as AnetAPI;
 
 class TransactionResponseCodeValidator extends AbstractValidator
 {
-    const TRANSACTION_CODE_APPROVED = 1;
-    const TRANSACTION_CODE_DECLINED = 2;
-    const TRANSACTION_CODE_ERROR = 3;
-    const TRANSACTION_CODE_HELD = 4;
-    const TRANSACTION_CODE_INVALID_AMOUNT = 5;
+    public const TRANSACTION_CODE_APPROVED = 1;
+    public const TRANSACTION_CODE_DECLINED = 2;
+    public const TRANSACTION_CODE_ERROR = 3;
+    public const TRANSACTION_CODE_HELD = 4;
+    public const TRANSACTION_CODE_INVALID_AMOUNT = 5;
 
     /**
      * @var array
@@ -84,13 +84,13 @@ class TransactionResponseCodeValidator extends AbstractValidator
      */
     protected function isSuccessfulTransaction(AnetAPI\ANetApiResponseType $response)
     {
-        
+
         $transactionDetails = $response->getTransactionResponse();
-        
+
         if ($transactionDetails && $transactionDetails instanceof AnetAPI\TransactionResponseType) {
             return in_array($transactionDetails->getResponseCode(), $this->validResponseCodes);
         }
-        
+
         return false;
     }
 }

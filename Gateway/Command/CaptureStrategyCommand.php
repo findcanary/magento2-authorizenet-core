@@ -16,8 +16,8 @@ use Magento\Sales\Api\Data\TransactionInterface;
 
 class CaptureStrategyCommand implements \Magento\Payment\Gateway\CommandInterface
 {
-    const AUTHORIZE_CAPTURE = 'sale';
-    const PRIOR_AUTH_CAPTURE = 'settle';
+    public const AUTHORIZE_CAPTURE = 'sale';
+    public const PRIOR_AUTH_CAPTURE = 'settle';
 
     /**
      * @var CommandPoolInterface
@@ -95,7 +95,7 @@ class CaptureStrategyCommand implements \Magento\Payment\Gateway\CommandInterfac
         if (!$payment->getAuthorizationTransaction()) {
             return self::AUTHORIZE_CAPTURE;
         }
-        
+
         return self::PRIOR_AUTH_CAPTURE;
     }
 

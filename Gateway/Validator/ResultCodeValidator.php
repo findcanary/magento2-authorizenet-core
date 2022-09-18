@@ -16,8 +16,8 @@ use net\authorize\api\contract\v1 as AnetAPI;
 
 class ResultCodeValidator extends AbstractValidator
 {
-    const RESULT_CODE_SUCCESS = 'Ok';
-    const RESULT_CODE_FAILURE = 'Error';
+    public const RESULT_CODE_SUCCESS = 'Ok';
+    public const RESULT_CODE_FAILURE = 'Error';
 
     /**
      * @var SubjectReader
@@ -37,7 +37,7 @@ class ResultCodeValidator extends AbstractValidator
         $this->subjectReader = $subjectReader;
         parent::__construct($resultFactory);
     }
-    
+
     /**
      * Check for valide transaction
      *

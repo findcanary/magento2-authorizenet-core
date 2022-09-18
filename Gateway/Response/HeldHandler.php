@@ -10,8 +10,8 @@ namespace AuthorizeNet\Core\Gateway\Response;
 class HeldHandler implements \Magento\Payment\Gateway\Response\HandlerInterface
 {
 
-    const KEY_AFDS_ACTION = 'FDSFilterAction';
-    const KEY_AFDS_FILTER_LIST = 'FDSFilters';
+    public const KEY_AFDS_ACTION = 'FDSFilterAction';
+    public const KEY_AFDS_FILTER_LIST = 'FDSFilters';
 
     /**
      * @var \AuthorizeNet\Core\Gateway\Helper\SubjectReader

@@ -14,7 +14,7 @@ use Magento\Sales\Model\Order\Payment;
 
 class TransactionIdHandler implements HandlerInterface
 {
-    const TRANSACTION_ID = 'transactionId';
+    public const TRANSACTION_ID = 'transactionId';
 
     /**
      * @var Config
@@ -69,7 +69,7 @@ class TransactionIdHandler implements HandlerInterface
         }
 
         $transactionId = $this->prepareTransactionId($transactionDetails->getTransId());
-        
+
         $payment->setTransactionId($transactionId);
         $payment->setLastTransId($transactionId);
 

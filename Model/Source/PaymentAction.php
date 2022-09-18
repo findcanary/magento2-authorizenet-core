@@ -16,8 +16,8 @@ use Magento\Framework\Option\ArrayInterface;
  */
 class PaymentAction implements ArrayInterface
 {
-    const ACTION_AUTHORIZE = 'authorize';
-    const ACTION_AUTHORIZE_CAPTURE = 'authorize_capture';
+    public const ACTION_AUTHORIZE = 'authorize';
+    public const ACTION_AUTHORIZE_CAPTURE = 'authorize_capture';
 
     /**
      * {@inheritdoc}

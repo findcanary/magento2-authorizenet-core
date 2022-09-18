@@ -9,8 +9,7 @@ namespace AuthorizeNet\Core\Model;
 
 class CcTypes
 {
-
-    const CC_TYPE_MAP = [
+    public const CC_TYPE_MAP = [
         "AmericanExpress"   => "AE",
         "Discover"          => "DI",
         "JCB"               => "JCB",

@@ -20,17 +20,17 @@ use net\authorize\api\constants\ANetEnvironment as ANetEnvironment;
 
 abstract class AbstractClient implements ClientInterface
 {
-    const TRANSACTION_DUMMY = 'dummy';
-    const TRANSACTION_AUTH_CAPTURE = 'authCaptureTransaction';
-    const TRANSACTION_AUTH_ONLY = 'authOnlyTransaction';
-    const TRANSACTION_REFUND = 'refundTransaction';
-    const TRANSACTION_VOID = 'voidTransaction';
-    const TRANSACTION_GET_DETAILS = 'getDetailsTransaction';
-    const TRANSACTION_AUTH_CAPTURE_CONTINUE = 'authCaptureContinueTransaction';
-    const TRANSACTION_AUTH_ONLY_CONTINUE = 'authOnlyContinueTransaction';
-    const TRANSACTION_PRIOR_AUTH_CAPTURE = 'priorAuthCaptureTransaction';
+    public const TRANSACTION_DUMMY = 'dummy';
+    public const TRANSACTION_AUTH_CAPTURE = 'authCaptureTransaction';
+    public const TRANSACTION_AUTH_ONLY = 'authOnlyTransaction';
+    public const TRANSACTION_REFUND = 'refundTransaction';
+    public const TRANSACTION_VOID = 'voidTransaction';
+    public const TRANSACTION_GET_DETAILS = 'getDetailsTransaction';
+    public const TRANSACTION_AUTH_CAPTURE_CONTINUE = 'authCaptureContinueTransaction';
+    public const TRANSACTION_AUTH_ONLY_CONTINUE = 'authOnlyContinueTransaction';
+    public const TRANSACTION_PRIOR_AUTH_CAPTURE = 'priorAuthCaptureTransaction';
 
-    const VC_DATA_DESCRIPTOR = 'COMMON.VCO.ONLINE.PAYMENT';
+    public const VC_DATA_DESCRIPTOR = 'COMMON.VCO.ONLINE.PAYMENT';
 
     /**
      * @var AnetRequestProxyFactory

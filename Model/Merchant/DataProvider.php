@@ -9,8 +9,7 @@ namespace AuthorizeNet\Core\Model\Merchant;
 
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
-
-    const MASKED_VALUE = '*******';
+    public const MASKED_VALUE = '*******';
 
     protected $urlBuilder;
 

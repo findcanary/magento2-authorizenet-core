@@ -14,26 +14,26 @@ use Magento\Store\Model\StoreManagerInterface;
 
 class Config extends \Magento\Payment\Gateway\Config\Config
 {
-    const CODE = 'anet_core';
+    public const CODE = 'anet_core';
 
-    const CORE_PATH_PATTERN = 'authorize_net/%s/%s';
+    public const CORE_PATH_PATTERN = 'authorize_net/%s/%s';
 
-    const PROD_SOLUTION_ID = 'AAA172611';
-    const TEST_SOLUTION_ID = 'AAA100302';
+    public const PROD_SOLUTION_ID = 'AAA172611';
+    public const TEST_SOLUTION_ID = 'AAA100302';
 
-    const KEY_ACTIVE = "active";
-    const KEY_TITLE = "title";
-    const KEY_DEBUG = "debug";
-    const KEY_TEST_MODE = 'test_mode';
-    const KEY_LOGIN_ID = "login_id";
-    const KEY_TRANS_KEY = "trans_key";
-    const KEY_CLIENT_KEY = "client_key";
-    const KEY_SIGNATURE_KEY = "signature_key";
-    const KEY_SPECIFICCOUNTRY = "specificcountry";
-    const KEY_SOLUTION_ID = 'solution_id';
+    public const KEY_ACTIVE = "active";
+    public const KEY_TITLE = "title";
+    public const KEY_DEBUG = "debug";
+    public const KEY_TEST_MODE = 'test_mode';
+    public const KEY_LOGIN_ID = "login_id";
+    public const KEY_TRANS_KEY = "trans_key";
+    public const KEY_CLIENT_KEY = "client_key";
+    public const KEY_SIGNATURE_KEY = "signature_key";
+    public const KEY_SPECIFICCOUNTRY = "specificcountry";
+    public const KEY_SOLUTION_ID = 'solution_id';
 
-    const TRANS_SUFFIX_CAPTURE = "-capture";
-    const TRANS_SUFFIX_VOID = "-void";
+    public const TRANS_SUFFIX_CAPTURE = "-capture";
+    public const TRANS_SUFFIX_VOID = "-void";
 
     /**
      * @var $methodCode
@@ -94,12 +94,11 @@ class Config extends \Magento\Payment\Gateway\Config\Config
      * Set Payment method code
      *
      * @param string $methodCode
-     * @return Config
+     * @return void
      */
     public function setMethodCode($methodCode)
     {
         $this->methodCode = $methodCode;
-        return $this;
     }
 
     /**

@@ -10,7 +10,7 @@ namespace AuthorizeNet\Core\Model\Merchant;
 class Configurator
 {
 
-    const CONFIG_PATH_MAP = [
+    public const CONFIG_PATH_MAP = [
         'login_id' => 'authorize_net/anet_core/login_id',
         'transaction_key' => 'authorize_net/anet_core/trans_key',
         'signature_key' => 'authorize_net/anet_core/signature_key',
@@ -18,23 +18,23 @@ class Configurator
         'sandbox_mode' => 'payment/anet_core/test_mode'
     ];
 
-    const ENCRYPTED_FIELDS = ['transaction_key', 'signature_key'];
+    public const ENCRYPTED_FIELDS = ['transaction_key', 'signature_key'];
 
     /**
      * @var $getDetailsCommand
      */
     protected $getDetailsCommand;
-    
+
     /**
      * @var $storeManager
      */
     protected $storeManager;
-    
+
     /**
      * @var $configWriter
      */
     protected $configWriter;
-    
+
     /**
      * @var $encryptor
      */
@@ -140,7 +140,7 @@ class Configurator
     /**
      * Get Config Path Map
      *
-     * @return count
+     * @return array
      */
     public function getConfigPathMap()
     {
@@ -150,7 +150,7 @@ class Configurator
     /**
      * Get Encrypted Fields
      *
-     * @return count
+     * @return array
      */
     public function getEncryptedFields()
     {

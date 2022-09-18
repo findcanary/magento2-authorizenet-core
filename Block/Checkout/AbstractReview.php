@@ -79,7 +79,7 @@ abstract class AbstractReview extends \Magento\Framework\View\Element\Template
      * Set Quote object.
      *
      * @param \Magento\Quote\Model\Quote $quote
-     * @return Review
+     * @return $this
      */
     public function setQuote(\Magento\Quote\Model\Quote $quote)
     {
@@ -138,7 +138,7 @@ abstract class AbstractReview extends \Magento\Framework\View\Element\Template
     /**
      * Declared abstract function
      *
-     * @return text
+     * @return string
      */
     abstract public function getShippingMethodTemplate();
 
@@ -289,7 +289,7 @@ abstract class AbstractReview extends \Magento\Framework\View\Element\Template
         }
         return sprintf($format, $this->escapeHtml($rate->getMethodTitle()), $price, $renderedInclTax);
     }
-    
+
     /**
      * Declared abstract function
      *

@@ -5,9 +5,9 @@ namespace AuthorizeNet\Core\Model\Logger;
 class Censor
 {
 
-    const CENSOR_MASK = '**MASKED**';
-    const CENSOR_MASK_PAN = 'xxxx';
-    const CENSOR_MASK_OBJECT = '**MASKED_OBJECT**';
+    public const CENSOR_MASK = '**MASKED**';
+    public const CENSOR_MASK_PAN = 'xxxx';
+    public const CENSOR_MASK_OBJECT = '**MASKED_OBJECT**';
 
     private $censorMap = [
         'cardCode' => ['replacement' => self::CENSOR_MASK],

@@ -15,7 +15,7 @@ abstract class AbstractRequestBuilder implements \Magento\Payment\Gateway\Reques
 {
     use Formatter;
 
-    const DUPLICATE_WINDOW_INTERVAL = 60;
+    public const DUPLICATE_WINDOW_INTERVAL = 60;
 
     /**
      * @var \AuthorizeNet\Core\Gateway\Config\Reader
@@ -95,7 +95,7 @@ abstract class AbstractRequestBuilder implements \Magento\Payment\Gateway\Reques
         $anetOpaqueData = new AnetAPI\OpaqueDataType();
 
         $opaqueDO = \Zend_Json::decode($opaqueData, \Zend_Json::TYPE_OBJECT);
-        
+
         $anetOpaqueData
             ->setDataDescriptor($opaqueDO->dataDescriptor)
             ->setDataValue($opaqueDO->dataValue);
@@ -150,7 +150,7 @@ abstract class AbstractRequestBuilder implements \Magento\Payment\Gateway\Reques
             if ($item->getParentItem() || $item->isDeleted()) {
                 continue;
             }
-            
+
             $anetItems[] = $this->prepareLineItem($item);
         }
         return $anetItems;
@@ -170,7 +170,11 @@ abstract class AbstractRequestBuilder implements \Magento\Payment\Gateway\Reques
 
         $formattedName = substr($item->getName(), 0, 31);
         $formattedSku = substr($item->getSku(), 0, 31);
-        $formattedDescription = substr($item->getDescription(), 0, 31);
+
+        $formattedDescription = '';
+        if (!empty($item->getDescription())) {
+            $formattedDescription = substr($item->getDescription(), 0, 31);
+        }
 
         $unitPrice = $item->getBasePrice();
         if ($item->getBaseDiscountAmount() > 0) {

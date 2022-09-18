@@ -10,7 +10,7 @@ namespace AuthorizeNet\Core\Plugin;
 class Minification
 {
 
-    const EXCLUDE_PATH = 'checkout.visa.com';
+    public const EXCLUDE_PATH = 'checkout.visa.com';
 
     /**
      * @var additionalExcludes

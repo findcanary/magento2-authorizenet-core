@@ -24,9 +24,9 @@ use net\authorize\api\contract\v1 as AnetAPI;
 
 class ProfileDetailsHandler implements HandlerInterface
 {
-    const KEY_CARD_TYPE = 'cardType';
+    public const KEY_CARD_TYPE = 'cardType';
 
-    const TOKEN_DETAILS_FIELDS = [
+    public const TOKEN_DETAILS_FIELDS = [
         'accountNumber',
         'accountName',
         'cardNumber',

@@ -17,12 +17,12 @@ use Magento\Sales\Model\Order\Payment;
  */
 class CcInfoHandler implements HandlerInterface
 {
-    const KEY_CARD_TYPE = 'cardType';
-    const KEY_CARD_NUMBER = 'cardNumber';
-    const KEY_AVS_RESULT_CODE = 'avsResultCode';
-    const KEY_AUTH_CODE = 'authCode';
-    const KEY_CVV_RESULT_CODE = 'cvvResultCode';
-    const KEY_CAVV_RESULT_CODE = 'cavvResultCode';
+    public const KEY_CARD_TYPE = 'cardType';
+    public const KEY_CARD_NUMBER = 'cardNumber';
+    public const KEY_AVS_RESULT_CODE = 'avsResultCode';
+    public const KEY_AUTH_CODE = 'authCode';
+    public const KEY_CVV_RESULT_CODE = 'cvvResultCode';
+    public const KEY_CAVV_RESULT_CODE = 'cavvResultCode';
 
     /**
      * @var SubjectReader

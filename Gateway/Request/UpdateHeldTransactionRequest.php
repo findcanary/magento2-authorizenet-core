@@ -11,15 +11,15 @@ use net\authorize\api\contract\v1 as AnetAPI;
 
 class UpdateHeldTransactionRequest extends AbstractRequestBuilder
 {
-    
-    const ACTION_APPROVE = 'approve';
-    const ACTION_DECLINE = 'decline';
+
+    public const ACTION_APPROVE = 'approve';
+    public const ACTION_DECLINE = 'decline';
 
     /**
      * @var $actionType
      */
     protected $actionType;
-    
+
     /**
      * UpdateHeldTransactionRequest Constructor
      *
@@ -34,9 +34,9 @@ class UpdateHeldTransactionRequest extends AbstractRequestBuilder
         string $transactionType = '',
         string $actionType = self::ACTION_APPROVE
     ) {
-        
+
         $this->actionType = $actionType;
-        
+
         parent::__construct($reader, $subjectReader, $transactionType);
     }
 
@@ -56,7 +56,7 @@ class UpdateHeldTransactionRequest extends AbstractRequestBuilder
 
         $anetRequest = new AnetAPI\UpdateHeldTransactionRequest();
         $heldRequest = new AnetAPI\HeldTransactionRequestType();
-        
+
         $heldRequest
             ->setRefTransId($payment->getAdditionalInformation(TransactionIdHandler::TRANSACTION_ID))
             ->setAction($this->actionType);

@@ -12,9 +12,9 @@ use net\authorize\api\contract\v1 as AnetAPI;
 
 class CcRefundRequestBuilder extends AbstractRequestBuilder
 {
-    
-    const CC_EXP_DATE_MASKED = 'XXXX';
-    
+
+    public const CC_EXP_DATE_MASKED = 'XXXX';
+
     public function __construct(
         \AuthorizeNet\Core\Gateway\Config\Reader $reader,
         \AuthorizeNet\Core\Gateway\Helper\SubjectReader $subjectReader,
