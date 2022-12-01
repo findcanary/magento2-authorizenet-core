@@ -337,8 +337,9 @@ abstract class AbstractRequestBuilder implements \Magento\Payment\Gateway\Reques
     protected function getShipping($payment)
     {
         if ($payment instanceof Payment) {
-            $formattedName = substr($payment->getOrder()->getShippingDescription(), 0, 31);
-            $formattedDescription = substr($payment->getOrder()->getShippingDescription(), 0, 255);
+            $shippingDescription = $payment->getOrder()->getShippingDescription();
+            $formattedName = $shippingDescription ? substr($shippingDescription, 0, 31) : '';
+            $formattedDescription = $shippingDescription ? substr($shippingDescription, 0, 255) : '';
             $shippingPrice = $payment->getOrder()->getBaseShippingAmount();
 
             if ($payment->getOrder()->getBaseShippingDiscountAmount() > 0) {
