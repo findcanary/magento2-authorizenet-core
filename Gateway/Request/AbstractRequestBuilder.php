@@ -94,7 +94,7 @@ abstract class AbstractRequestBuilder implements \Magento\Payment\Gateway\Reques
         $anetPayment = new AnetAPI\PaymentType();
         $anetOpaqueData = new AnetAPI\OpaqueDataType();
 
-        $opaqueDO = \Zend_Json::decode($opaqueData, \Zend_Json::TYPE_OBJECT);
+        $opaqueDO = \Laminas\Json\Json::decode($opaqueData, \Laminas\Json\Json::TYPE_OBJECT);
 
         $anetOpaqueData
             ->setDataDescriptor($opaqueDO->dataDescriptor)
